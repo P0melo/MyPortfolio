@@ -87,9 +87,10 @@ h1, h2, h3, h4, h5, h6, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 400px;
+    height: 100%;
 	text-align: center;
 	padding: 0px;
+	padding-top: 25%;
 	font-size: 12px;
 	color: black;
 }
@@ -99,8 +100,7 @@ h1, h2, h3, h4, h5, h6, body {
 } 
 
 .footer-overlay {
-	background-color: rgba(255, 165, 0, 0.50);
-	height: 400px;
+	height: 100%;
 	color: black;
 }
 
@@ -316,14 +316,6 @@ img.calendar, img.email, img.phone{
 		padding-top: 10px;
 	}
 	
-	.footer{
-		height: 50%;
-	}
-	
-	.footer-overlay{
-		height: 100%;
-	}
-	
 	.contact h1{
 		font-size: 500%;
 	}
@@ -331,6 +323,11 @@ img.calendar, img.email, img.phone{
 	.contact p, .footer-overlay p{
 		font-size: 250%;
 	}
+	
+	.footer{
+		margin-top: 100px;
+	}
+	
 }
 
 @media only screen and (min-width: 1152px) {
@@ -351,8 +348,6 @@ img.calendar, img.email, img.phone{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-	
-	.header {min-height: 50%;}
 	
 	.menu{
 		padding: 15px;
@@ -427,7 +422,8 @@ img.calendar, img.email, img.phone{
 	}
 	
 	.footer{
-		height: 50%;
+		height: 100%;
+		padding-top: 100px;
 	}
 	
 	.footer-overlay{
@@ -557,7 +553,7 @@ img.calendar, img.email, img.phone{
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
-    if (document.body.scrollTop > 325 || document.documentElement.scrollTop > 325) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         document.getElementById("navBar").style.visibility = "visible";
     } else {
         document.getElementById("navBar").style.visibility = "hidden";
@@ -568,4 +564,3 @@ function myFunction() {
 </body>
 </html>
 
-	

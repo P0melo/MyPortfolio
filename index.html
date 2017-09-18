@@ -21,6 +21,11 @@
     padding: 15px;
 }
 
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
 p{
 	font-size: 20px;
 }
@@ -48,11 +53,6 @@ h1, h2, h3, h4, h5, h6, body {
 
 .middle a {
 	text-decoration: underline;
-}
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
 }
 
 .temp {
@@ -209,6 +209,10 @@ img.calendar, img.email, img.phone{
   60% {
     transform: translateY(-15px);
   }
+}
+	
+@media only screen and (min-width: 900px) {
+	font-size: 300%;
 }
 
 @media only screen and (min-width: 900px) {

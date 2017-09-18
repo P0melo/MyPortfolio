@@ -11,19 +11,14 @@
 * {
     box-sizing: border-box;
 }
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+.row{
+	margin: 0;
 }
+
 [class*="col-"] {
     float: left;
     padding: 15px;
-}
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
 }
 
 p{
@@ -34,25 +29,28 @@ h1, h2, h3, h4, h5, h6, body {
     font-family: "Century Gothic", sans-serif;
 }
 
-.menu a{
+.menu {
     text-decoration: underline;
-    padding-right: 15px;
 }
 
 .nav {
     width: 100%;
 	text-align: center;
-	padding: 10px;
 	z-index: 4;
 	font-weight: bold;
 }
 
 .nav a{
-	padding-left: 50px;
+	padding: 15px;
 }
 
 .middle a {
 	text-decoration: underline;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
 }
 
 .temp {
@@ -122,15 +120,6 @@ body, html {
 
 .middle{
 	margin-top: 50px;
-	<!-- background-color: rgba(255, 165, 0, 0.75); -->
-}
-
-.aboutme, .meSideDescription{
-	padding-bottom: 0;
-}
-
-.myportfolio{
-	padding-top: 0;
 }
 
 .aboutme h1 {
@@ -168,6 +157,7 @@ body, html {
 
 .skills, .education, .experience, .borders{
 	padding-top: 0;
+	padding-right: 0;
 	padding-bottom: 0;
 }
 
@@ -210,9 +200,80 @@ img.calendar, img.email, img.phone{
     transform: translateY(-15px);
   }
 }
+
+@media only screen and (min-width: 300px) {
+	.menu {
+		white-space: nowrap;
+		font-size: smaller;
+	}
 	
-@media only screen and (min-width: 360px) {
-	font-size: 300%;
+	.middleSpan{
+		padding-top: 100px;
+		line-height: 1;
+		font-weight: bold;
+	}
+	
+	.aboutme, .meSideDescription{
+		padding-bottom: 0;
+	}
+	
+	.myportfolio, .container{
+		padding-top: 0;
+	}
+	
+	.meSideDescription p{
+		font-size: medium;
+	}
+	
+	.container h2{
+		font-size: medium;
+	}
+	
+	.borders h4, .borders h5, .borders p{
+		font-size: small;
+	}
+
+	.progress-bar span{
+		font-size: small;
+	}
+	
+	.contact p, .footer-overlay p{
+		font-size: medium;
+	}
+}
+
+
+@media only screen and (min-width: 600px){
+
+	.menu a{
+		font-size: 200%;
+		padding: 50px;
+	}
+	.middle p, .learnmore p{
+		font-size: 200%;
+	}
+	.middleSpan{
+		padding-top: 200px;
+		font-size: 300%;
+		line-height: 1;
+		font-weight: bold;
+	}
+	
+	.container{
+		padding-top: 15px;
+	}
+	
+	.container h2{
+		font-size: 200%;
+	}
+	
+	.contact h2{
+		font-size: 300%;
+	}
+	
+	.contact p, .footer-overlay p{
+		font-size: 200%;
+	}
 }
 
 @media only screen and (min-width: 900px) {
@@ -233,33 +294,26 @@ img.calendar, img.email, img.phone{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+	
 	.header {min-height: 50%;}
+	
+	.meSideDescription p{
+		font-size: large;
+	}
+	
+	.borders h4, .borders h5, .borders p{
+		font-size: large;
+	}
+	
 	.middleSpan{
+		padding-top: 100px;
 		font-size: 300%;
 		line-height: 1;
 		font-weight: bold;
 	}
-	
-	.aboutme{
-		padding-left: 100px;
-		padding-right: 100px;
-		padding-top: 0px;
-	}
-		
-	.myportfolio{
-		padding-left: 100px;
-		padding-right: 100px;
-	}
 		
 	.container{
 		height: 350px;
-		padding-left: 10px;
-		padding-top: 0px;
-	}
-		
-	.borders {
-		padding-left: 20px;
-		padding-right: 10px;
 	}
 	
 	.nav, .temp{
@@ -273,22 +327,12 @@ img.calendar, img.email, img.phone{
 
 <!-- top nav bar-->
 <div class="menu temp" id="navBar">
-	<a href="#home">HOME</a>
-	<a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+	<a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
 </div>
 
-<!-- for small screen
-<div class="smallMenu">
-    <a href="#">ABOUT</a>
-    <a href="#">PORTFOLIO</a>
-    <a href="#">CONTACT</a>
-</div>-->
 <div class="header" id="home">
 	<div class="menu nav" id="navBar2">
-		<a href="#home">HOME</a>
-		<a href="#about">ABOUT</a>
-		<a href="#contact">CONTACT</a>
+		<a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
 	</div>
 	<div class="col-12 middle">
 		<span class="middleSpan">Hi there. I'm Kevin, a web developer.</span>
@@ -306,7 +350,7 @@ img.calendar, img.email, img.phone{
 
 <div class="row">
 
-<div class="col-12 aboutme" id="about">
+<div class="col-11 aboutme" id="about">
 	<h1>About me</h1>
 	<div class="col-4">
 		<img class="picture" src="picture_me.JPG" alt="smiley face"/>
@@ -323,7 +367,7 @@ img.calendar, img.email, img.phone{
 		</p>
 	</div>
 </div>
-<div class="col-12 myportfolio" id="portfolio">
+<div class="col-11 myportfolio" id="portfolio">
 	<div class="col-4 skills">
 		<div class="col-12 container">
 			<h2><img class="brain" src="brain.png" alt="brain" />&nbsp;&nbsp;Skills</h2>
@@ -376,7 +420,7 @@ img.calendar, img.email, img.phone{
 <div class="footer">
 	<div class="col-12 footer-overlay">			
 		<div class="col-12 contact" id="contact">
-			<h2>Get in touch with me</h2>
+			<h1>Contact</h1>
 			<p><img class="email" src="email.png" alt="email" />&nbsp;&nbsp;boymarkkevin@gmail.com</p>
 			<p><img class="phone" src="phone.png" alt="phone" />&nbsp;&nbsp;+639954335359</p>
 		</div>

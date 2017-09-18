@@ -150,6 +150,10 @@ body, html {
 	vertical-align: middle;
 }
 
+.brain2, .cap2, .case2{
+	display: none;
+}
+
 .skills h2, .education h2, .experience h2, .borders h4{
 	font-weight: bold;
 }
@@ -204,7 +208,8 @@ img.calendar, img.email, img.phone{
 @media only screen and (min-width: 300px) {
 	.menu {
 		white-space: nowrap;
-		font-size: smaller;
+		font-size: large;
+		padding: 20px;
 	}
 	
 	.middleSpan{
@@ -244,19 +249,31 @@ img.calendar, img.email, img.phone{
 
 
 @media only screen and (min-width: 600px){
-
+	.menu{
+		padding: 25px;
+	}
+	
 	.menu a{
 		font-size: 200%;
 		padding: 50px;
 	}
 	.middle p, .learnmore p{
-		font-size: 200%;
+		font-size: 400%;
 	}
+	
 	.middleSpan{
 		padding-top: 200px;
-		font-size: 300%;
+		font-size: 500%;
 		line-height: 1;
 		font-weight: bold;
+	}
+	
+	.aboutme h1{
+		font-size: 500%;
+	}
+	
+	.meSideDescription p{
+		font-size: 200%;
 	}
 	
 	.container{
@@ -264,15 +281,55 @@ img.calendar, img.email, img.phone{
 	}
 	
 	.container h2{
-		font-size: 200%;
+		font-size: 400%;
 	}
 	
-	.contact h2{
+	.brain, .cap, .case{
+		display: none;
+	}
+	
+	.brain2, .cap2, .case2{
+		display: inline-block;
+	}
+	
+	img.calendar{
+		height: 50px;
+		width: 50px;
+	}
+	
+	.borders h4{
 		font-size: 300%;
 	}
 	
+	.borders h5, .borders p{
+		font-size: 250%
+	}
+	
+	.progress{
+		height: 50px;
+	}
+	
+	.progress span{
+		position: absolute;
+		height:50px;
+		font-size: 50px;
+		padding-top: 10px;
+	}
+	
+	.footer{
+		height: 50%;
+	}
+	
+	.footer-overlay{
+		height: 100%;
+	}
+	
+	.contact h1{
+		font-size: 500%;
+	}
+	
 	.contact p, .footer-overlay p{
-		font-size: 200%;
+		font-size: 250%;
 	}
 }
 
@@ -297,27 +354,92 @@ img.calendar, img.email, img.phone{
 	
 	.header {min-height: 50%;}
 	
-	.meSideDescription p{
-		font-size: large;
+	.menu{
+		padding: 15px;
 	}
 	
-	.borders h4, .borders h5, .borders p{
-		font-size: large;
+	.menu a{
+		font-size: 150%;
+		padding: 50px;
+	}
+	
+	.middle p, .learnmore p{
+		font-size: 200%;
 	}
 	
 	.middleSpan{
 		padding-top: 100px;
-		font-size: 300%;
+		font-size: 50px;
 		line-height: 1;
 		font-weight: bold;
 	}
-		
-	.container{
-		height: 350px;
+	
+	.aboutme h1{
+		font-size: 400%;
 	}
 	
-	.nav, .temp{
-		text-align: right;
+	.meSideDescription p{
+		font-size: 150%;
+	}
+	
+	.container{
+		padding-top: 15px;
+	}
+	
+	.container h2{
+		font-size: 300%;
+	}
+	
+	.brain, .cap, .case{
+		display: inline-block;
+	}
+	
+	.brain2, .cap2, .case2{
+		display: none;
+	}
+	
+	img.calendar{
+		height: 30px;
+		width: 30px;
+	}
+	
+	.borders h4{
+		font-size: 200%;
+	}
+	
+	.borders h5, .borders p{
+		font-size: 150%
+	}
+	
+	.progress{
+		height: 25px;
+	}
+	
+	.progress-bar{
+		height: 25px;
+	}
+	
+	.progress span{
+		position: absolute;
+		height:20px;
+		font-size: 20px;
+		padding-top: 5px;
+	}
+	
+	.footer{
+		height: 50%;
+	}
+	
+	.footer-overlay{
+		height: 100%;
+	}
+	
+	.contact h1{
+		font-size: 300%;
+	}
+	
+	.contact p, .footer-overlay p{
+		font-size: 200%;
 	}
 }
 
@@ -350,7 +472,7 @@ img.calendar, img.email, img.phone{
 
 <div class="row">
 
-<div class="col-11 aboutme" id="about">
+<div class="col-12 aboutme" id="about">
 	<h1>About me</h1>
 	<div class="col-4">
 		<img class="picture" src="picture_me.JPG" alt="smiley face"/>
@@ -367,10 +489,10 @@ img.calendar, img.email, img.phone{
 		</p>
 	</div>
 </div>
-<div class="col-11 myportfolio" id="portfolio">
+<div class="col-12 myportfolio" id="portfolio">
 	<div class="col-4 skills">
 		<div class="col-12 container">
-			<h2><img class="brain" src="brain.png" alt="brain" />&nbsp;&nbsp;Skills</h2>
+			<h2><img class="brain" src="brain.png" alt="brain" /><img class="brain2" src="brain2.png" alt="brain2" />&nbsp;&nbsp;Skills</h2>
 			<div class="borders">
 				<h4>Web Development</h4>
 				<h5>Front-End(HTML, CSS, JavaScript)</h5>
@@ -396,7 +518,7 @@ img.calendar, img.email, img.phone{
 	</div>
 	<div class="col-4 education">
 		<div class="col-12 container">
-			<h2><img class="cap" src="cap.png" alt="cap" />&nbsp;&nbsp;Education</h2>
+			<h2><img class="cap" src="cap.png" alt="cap" /><img class="cap2" src="cap2.png" alt="cap2" />&nbsp;&nbsp;Education</h2>
 			<div class="borders">
 				<h4>Saint Louis University, Baguio City</h4>
 				<p><img class="calendar" src="calendar.png" alt="calendar" />&nbsp;&nbsp;2009 - 2013</p>
@@ -406,7 +528,7 @@ img.calendar, img.email, img.phone{
 	</div>
 	<div class="col-4 experience">
 		<div class="col-12 container">
-			<h2><img class="case" src="case.png" alt="case" />&nbsp;&nbsp;Work Experience</h2>
+			<h2><img class="case" src="case.png" alt="case" /><img class="case2" src="case2.png" alt="case2" />&nbsp;&nbsp;Work Experience</h2>
 			<div class="borders">
 				<h4>Accenture, Inc.</h4>
 				<p><img class="calendar" src="calendar.png" alt="calendar" />&nbsp;&nbsp;July 2013 - August 2017</p>
@@ -446,3 +568,4 @@ function myFunction() {
 </body>
 </html>
 
+	

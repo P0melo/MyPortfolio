@@ -183,7 +183,36 @@ img.calendar, img.email, img.phone{
 	opacity: .95;
 }
 
-@media only screen and (min-width: 600px) {
+	
+.more { 
+	color: white; 
+	text-decoration: none; 
+}
+
+.arrow {
+	text-align: center;
+	margin: 8% 0;
+	margin-bottom: 15px;
+}	
+.bounce {
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+	
+<!--@media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
@@ -199,9 +228,9 @@ img.calendar, img.email, img.phone{
     .col-m-12 {width: 100%;}
     .hiddenLi {display: block};
 	.middle {margin-top: 0}
-}
+}-->
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
     /* For desktop: */
 		
 	[class*="col-"] {
@@ -279,6 +308,14 @@ img.calendar, img.email, img.phone{
 	<div class="col-12 middle">
 		<span class="middleSpan">Hi there. I'm Kevin, a web developer.</span>
 		<p>Available for hire.</p>
+	</div>
+	
+	<br />
+	<div class="col-12 learnmore">
+		<p>Learn more about me.</p>
+	</div>
+	<div class="arrow bounce">
+		<a class="more more-arrow-down" href="#about"><img class="arrow-down" src="arrow-down.png" alt="arrow" /></a>
 	</div>
 </div>
 

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+p{
+	font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, body {
+    font-family: "Century Gothic", sans-serif;
+}
+
+.menu a{
+    text-decoration: underline;
+    padding-right: 15px;
+}
+
+.nav {
+    width: 100%;
+	text-align: center;
+	padding: 10px;
+	z-index: 4;
+	font-weight: bold;
+}
+
+.nav a{
+	padding-left: 50px;
+}
+
+.middle a {
+	text-decoration: underline;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+.temp {
+	position: fixed;
+	background-color: white;
+    width: 100%;
+    box-shadow: 1px 1px 5px grey;
+	text-align: center;
+	padding: 10px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+.temp a{
+	color: black;
+	padding: 15px;
+}
+
+
+.header {
+    background-image: url('134.jpg');
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.footer {
+	background-image: url('134.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+	text-align: center;
+	padding: 0px;
+	font-size: 12px;
+	color: black;
+}
+
+.footer a{
+	text-decoration: underline;
+} 
+
+.footer-overlay {
+	background-color: rgba(255, 165, 0, 0.50);
+	height: 400px;
+	color: black;
+}
+
+body, html {
+    height: 100%;
+    /*color: #777;*/
+    line-height: 1.8;
+}
+
+.middleSpan{
+	display: block;
+	font-size: 150%;
+	line-height: 1;
+	font-weight: bold;
+	word-wrap: break-word;
+}
+
+.middle{
+	margin-top: 50px;
+	<!-- background-color: rgba(255, 165, 0, 0.75); -->
+}
+
+.aboutme, .meSideDescription{
+	padding-bottom: 0;
+}
+
+.myportfolio{
+	padding-top: 0;
+}
+
+.aboutme h1 {
+	text-align: center;
+}
+
+.picture{
+	border-top: thick solid orange;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.meSide h4{
+	text-align: center;
+}
+
+.contact{
+	text-align: center;
+}
+
+.contact h2 {
+	font-weight: bold;
+}
+
+.brain, .cap, .case{
+	vertical-align: middle;
+}
+
+.skills h2, .education h2, .experience h2, .borders h4{
+	font-weight: bold;
+}
+
+
+.skills, .education, .experience, .borders{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.progress-bar{
+	background-color: orange;
+	color: black;
+}
+
+img.calendar, img.email, img.phone{
+	width: 30px;
+	height: 30px;
+	vertical-align: text-bottom;
+	opacity: .95;
+}
+
+.more { 
+	color: white; 
+	text-decoration: none; 
+}
+
+.arrow {
+	text-align: center;
+	margin: 8% 0;
+	margin-bottom: 15px;
+}	
+.bounce {
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+	.middleSpan{
+		font-size: 250%;
+	}
+    <!-- .col-m-1 {width: 8.33%;} -->
+    <!-- .col-m-2 {width: 16.66%;} -->
+    <!-- .col-m-3 {width: 25%;} -->
+    <!-- .col-m-4 {width: 33.33%;} -->
+    <!-- .col-m-5 {width: 41.66%;} -->
+    <!-- .col-m-6 {width: 50%;} -->
+    <!-- .col-m-7 {width: 58.33%;} -->
+    <!-- .col-m-8 {width: 66.66%;} -->
+    <!-- .col-m-9 {width: 75%;} -->
+    <!-- .col-m-10 {width: 83.33%;} -->
+    <!-- .col-m-11 {width: 91.66%;} -->
+    <!-- .col-m-12 {width: 100%;} -->
+}
+
+@media only screen and (min-width: 1080px) {
+    /* For desktop: */
+		
+	[class*="col-"] {
+		padding: 15px;
+	}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+	.header {min-height: 50%;}
+	.middleSpan{
+		font-size: 300%;
+		line-height: 1;
+		font-weight: bold;
+	}
+	
+	.aboutme{
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-top: 0px;
+	}
+		
+	.myportfolio{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+		
+	.container{
+		height: 350px;
+		padding-left: 10px;
+		padding-top: 0px;
+	}
+		
+	.borders {
+		padding-left: 20px;
+		padding-right: 10px;
+	}
+	
+	.nav, .temp{
+		text-align: right;
+	}
+}
+
+</style>
+</head>
+<body>
+
+<!-- top nav bar-->
+<div class="menu temp" id="navBar">
+	<a href="#home">HOME</a>
+	<a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+</div>
+
+<!-- for small screen
+<div class="smallMenu">
+    <a href="#">ABOUT</a>
+    <a href="#">PORTFOLIO</a>
+    <a href="#">CONTACT</a>
+</div>-->
+<div class="header" id="home">
+	<div class="menu nav" id="navBar2">
+		<a href="#home">HOME</a>
+		<a href="#about">ABOUT</a>
+		<a href="#contact">CONTACT</a>
+	</div>
+	<div class="col-12 middle">
+		<span class="middleSpan">Hi there. I'm Kevin, a web developer.</span>
+		<p>Available for hire.</p>
+	</div>
+	
+	<br />
+	<div class="col-12 learnmore">
+		<p>Learn more about me.</p>
+	</div>
+	<div class="arrow bounce">
+		<a class="more more-arrow-down" href="#about"><img class="arrow-down" src="arrow-down.png" alt="arrow" /></a>
+	</div>
+</div>
+
+<div class="row">
+
+<div class="col-12 aboutme" id="about">
+	<h1>About me</h1>
+	<div class="col-4">
+		<img class="picture" src="picture_me.jpg" alt="smiley face"/>
+	</div>
+	<div class="col-8 meSideDescription">
+		<p>I'm a Manila-based developer who designs, codes and modify websites.
+		My area of expertise is on the front-end side. When I first started working in Accenture,
+		I was trained as a Java developer but I was assigned to a project and worked as a production support. 
+		In this project, I developed my communication skills. After a year of being a support, I was reassigned to 
+		another project and became a part of the development team mainly working in the UI using 
+		ASP.Net, html, css and javascript. This is where I got my passion to become a front-end developer.
+		<br />
+		<br />
+		</p>
+	</div>
+</div>
+<div class="col-12 myportfolio" id="portfolio">
+	<div class="col-4 skills">
+		<div class="col-12 container">
+			<h2><img class="brain" src="brain.png" alt="brain" />&nbsp;&nbsp;Skills</h2>
+			<div class="borders">
+				<h4>Web Development</h4>
+				<h5>Front-End(HTML, CSS, JavaScript)</h5>
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+					<span>90%</span>
+				  </div>
+				</div>
+				<h5>Back-end(C# .NET, PHP)</h5>
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+					<span>80%</span>
+				  </div>
+				</div>
+				<h5>DBMS(SQL Server, MySQL)</h5>
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+					<span>70%</span>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-4 education">
+		<div class="col-12 container">
+			<h2><img class="cap" src="cap.png" alt="cap" />&nbsp;&nbsp;Education</h2>
+			<div class="borders">
+				<h4>Saint Louis University, Baguio City</h4>
+				<p><img class="calendar" src="calendar.png" alt="calendar" />&nbsp;&nbsp;2009 - 2013</p>
+				<p>Bachelor of Science in Information Technology</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-4 experience">
+		<div class="col-12 container">
+			<h2><img class="case" src="case.png" alt="case" />&nbsp;&nbsp;Work Experience</h2>
+			<div class="borders">
+				<h4>Accenture, Inc.</h4>
+				<p><img class="calendar" src="calendar.png" alt="calendar" />&nbsp;&nbsp;July 2013 - August 2017</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="footer">
+	<div class="col-12 footer-overlay">			
+		<div class="col-12 contact" id="contact">
+			<h2>Get in touch with me</h2>
+			<p><img class="email" src="email.png" alt="email" />&nbsp;&nbsp;boymarkkevin@gmail.com</p>
+			<p><img class="phone" src="phone.png" alt="phone" />&nbsp;&nbsp;+639954335359</p>
+		</div>
+		<p>Powered by html, css, javascript and bootstrap</p>
+		<br />
+		<p><a href="https://icons8.com" style="font-size: 75%">Icons pack by Icons8</a></p>
+		<p><a href='http://www.freepik.com/free-vector/orange-polygon-background_1188189.htm' style="font-size: 75%">Background Vector Designed by Freepik</a></p>
+	</div>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > 325 || document.documentElement.scrollTop > 325) {
+        document.getElementById("navBar").style.visibility = "visible";
+    } else {
+        document.getElementById("navBar").style.visibility = "hidden";
+    }
+}
+</script>
+
+</body>
+</html>
+
